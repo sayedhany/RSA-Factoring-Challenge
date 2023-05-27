@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-	long int number;
+	unsigned long long number;
 
 	if (argc != 2)
 	{
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		printf("Error, Can't open file %s\n", argv[1]);
 		return (1);
 	}
-	while (fscanf(file, "%ld", &number) != EOF)
+	while (fscanf(file, "%llu", &number) != EOF)
 	{
 		factorize(number);
 	}

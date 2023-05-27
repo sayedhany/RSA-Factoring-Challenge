@@ -3,18 +3,18 @@
  * factorize - printf
  * @number: number
  */
-void factorize(long int number)
+void factorize(unsigned long long  number)
 {
-	long int i;
+	unsigned long long i;
 
-	printf("%ld=", number);
+	printf("%llu=", number);
 	for (i = 2; i <= number / 2; i++)
 	{
 		if (number % i == 0)
 		{
-			printf("%ld*%ld\n", number / i, i);
+			printf("%llu*%llu\n", number / i, i);
 			return;
 		}
 	}
-	printf("%ld*%d\n", number, 1);
+	printf("%llu*%d\n", number, 1);
 }
